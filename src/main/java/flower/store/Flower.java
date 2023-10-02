@@ -8,12 +8,24 @@ import lombok.Setter;
 @Setter
 public class Flower {
     @Getter
-    private double sepalLength;
-    private FlowerColor color;
+    protected double sepalLength;
+    protected FlowerColor color;
     @Getter
-    private double price;
+    protected double price;
     @Getter
-    private FlowerType flowerType;
+    protected FlowerType flowerType;
+
+    public Flower(Flower item)
+    {
+        this.flowerType = item.flowerType;
+        this.color = item.color;
+        this.price = item.price;
+        this.sepalLength = item.sepalLength;
+    }
+
+    public Flower()
+    {
+    }
 
     public String getColor() {
         return color.toString();
