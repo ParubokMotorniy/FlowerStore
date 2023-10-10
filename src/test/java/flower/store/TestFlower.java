@@ -1,5 +1,7 @@
 package flower.store;
 
+import flower.sources.Flower;
+import flower.sources.FlowerColor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -7,7 +9,8 @@ import java.util.Random;
 
 import org.junit.jupiter.api.Assertions;
 
-public class FlowerTest {
+public class TestFlower
+{
     private static final Random RANDOM_GENERATOR = new Random();
     private static final int MAX_PRICE = 100;
     private Flower flower;

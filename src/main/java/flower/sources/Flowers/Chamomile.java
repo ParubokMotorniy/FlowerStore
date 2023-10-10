@@ -1,8 +1,8 @@
-package flower.store.Flowers;
+package flower.sources.Flowers;
 
-import flower.store.Flower;
-import flower.store.FlowerColor;
-import flower.store.FlowerType;
+import flower.sources.Flower;
+import flower.sources.FlowerColor;
+import flower.sources.FlowerType;
 
 public class Chamomile extends Flower
 {

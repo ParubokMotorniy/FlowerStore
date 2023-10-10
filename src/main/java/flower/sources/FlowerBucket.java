@@ -1,12 +1,10 @@
-package flower.store;
-
-import java.rmi.Remote;
+package flower.sources;
 import java.util.ArrayList;
 import java.util.*;
 
 public class FlowerBucket
 {
-    private List<FlowerPack> packs = new ArrayList<FlowerPack>();
+    private List<FlowerPack> packs = new ArrayList<>();
 
     public void AddPack(FlowerPack newPack)
     {
@@ -15,7 +13,7 @@ public class FlowerBucket
     public double GetPrice()
     {
         double sum = 0;
-        for(FlowerPack pack : packs)
+        for (FlowerPack pack : packs)
         {
             sum += pack.GetPrice();
         }

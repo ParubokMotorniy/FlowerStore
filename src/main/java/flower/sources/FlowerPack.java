@@ -1,7 +1,4 @@
-package flower.store;
-
-import javax.naming.directory.InvalidAttributeValueException;
-
+package flower.sources;
 public class FlowerPack extends Item {
     private Flower flower;
     private int quantity = 1;
@@ -12,7 +9,7 @@ public class FlowerPack extends Item {
     }
     public FlowerPack(Flower item, int quantity) throws IllegalArgumentException
     {
-        if(quantity <= 0)
+        if (quantity <= 0)
         {
             throw new IllegalArgumentException();
         }
@@ -32,9 +29,12 @@ public class FlowerPack extends Item {
 
     public void setQuantity(int quantity) throws IllegalArgumentException
     {
-        if(quantity <= 0)
+        if (quantity <= 0)
         {
             throw new IllegalArgumentException();
+        } else
+        {
+            this.quantity = quantity;
         }
     }
 
