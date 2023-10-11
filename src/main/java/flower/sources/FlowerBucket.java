@@ -10,6 +10,19 @@ public class FlowerBucket
     {
         packs.add(newPack);
     }
+    public FlowerPack GetPack(FlowerType type)
+    {
+        FlowerPack newPack = null;
+        for(FlowerPack pack : packs)
+        {
+            if(pack.getFlower().flowerType == type)
+            {
+                newPack = pack;
+                break;
+            }
+        }
+        return newPack;
+    }
     public double GetPrice()
     {
         double sum = 0;
