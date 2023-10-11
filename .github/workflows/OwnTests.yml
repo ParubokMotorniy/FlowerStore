@@ -18,7 +18,7 @@ env:
   BUILD_TYPE: Release
   
 jobs:
-  build:
+  build_and_test:
 
     runs-on: windows-latest
 
@@ -30,17 +30,15 @@ jobs:
         java-version: 20
         distribution: temurin
         cache: maven
+        
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
       uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
+      
     - name: Run Test
       run: mvn clean test
-  test:
-    runs-on: windows-latest
-    steps:
-    - uses: actions/checkout@v3
   
   
